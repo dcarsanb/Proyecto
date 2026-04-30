@@ -25,13 +25,13 @@ public class TextoUtil {
         if (texto == null || texto.isBlank()) {
             return "SIN_TITULO";
         }
-        System.out.println("dcarsanb");
         String limpio = texto.trim();
         return limpio.substring(0, 1).toUpperCase() + limpio.substring(1).toLowerCase();
     }
 
     public static String unirTitulos(List<Tarea> tareas) {
         StringBuilder builder = new StringBuilder();
+        System.out.println("dcarsanb");
         for (int i = 0; i < tareas.size(); i++) {
             builder.append(formatearTitulo(tareas.get(i).getTitulo()));
             if (i < tareas.size() - 1) {
