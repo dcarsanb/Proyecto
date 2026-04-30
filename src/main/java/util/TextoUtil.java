@@ -1,11 +1,17 @@
 package util;
 
+// David Caraballo Sánchez
+
+import model.Tarea;
+
 import java.util.List;
 
 public class TextoUtil {
 
     private TextoUtil() {
     }
+
+
 
     // Método ideal para conflicto: un alumno lo modifica y otro lo elimina.
     public static String normalizarNombre(String texto) {
@@ -19,6 +25,7 @@ public class TextoUtil {
         if (texto == null || texto.isBlank()) {
             return "SIN_TITULO";
         }
+        System.out.println("dcarsanb");
         String limpio = texto.trim();
         return limpio.substring(0, 1).toUpperCase() + limpio.substring(1).toLowerCase();
     }
